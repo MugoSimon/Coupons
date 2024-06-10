@@ -19,6 +19,7 @@ public class CouponService {
     @Autowired
     CouponRepository couponRepository;
 
+    // Create Coupon
     public EntityResponse createCoupon(Coupon coupon) {
         EntityResponse entityResponse = new EntityResponse<>();
         try {
@@ -49,6 +50,7 @@ public class CouponService {
 
     }
 
+    // Fetch Coupon By Code
     public EntityResponse fetchCouponByCode(String code) {
         EntityResponse entityResponse = new EntityResponse<>();
 
@@ -77,6 +79,7 @@ public class CouponService {
         }
     }
 
+    // Fetch All Coupons
     public EntityResponse fetchAllCoupons() {
         EntityResponse entityResponse = new EntityResponse<>();
         try {
@@ -102,6 +105,8 @@ public class CouponService {
         }
     }
 
+
+    // Modify Coupon
     public EntityResponse modifyCoupon(Coupon updatedCoupon) {
         EntityResponse entityResponse = new EntityResponse<>();
 
@@ -137,6 +142,7 @@ public class CouponService {
         }
     }
 
+    // Delete Coupon
     public EntityResponse deleteCoupon(String code) {
         EntityResponse entityResponse = new EntityResponse<>();
 
@@ -150,6 +156,7 @@ public class CouponService {
                 entityResponse.setMessage(HttpStatus.OK.getReasonPhrase());
                 entityResponse.setStatusCode(HttpStatus.OK.value());
             } else {
+                log.warn("====> coupons not found");
                 entityResponse.setMessage(HttpStatus.NOT_FOUND.getReasonPhrase());
                 entityResponse.setStatusCode(HttpStatus.NOT_FOUND.value());
             }
