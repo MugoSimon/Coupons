@@ -9,7 +9,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class EntityResponse <T> {
+public class EntityResponse<T> {
 
     private String message;
     private T entity;

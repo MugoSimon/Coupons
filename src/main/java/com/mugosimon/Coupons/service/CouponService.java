@@ -105,7 +105,6 @@ public class CouponService {
         }
     }
 
-
     // Modify Coupon
     public EntityResponse modifyCoupon(Coupon updatedCoupon) {
         EntityResponse entityResponse = new EntityResponse<>();

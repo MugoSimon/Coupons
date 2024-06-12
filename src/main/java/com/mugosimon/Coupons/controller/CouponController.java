@@ -24,7 +24,7 @@ public class CouponController {
 
     // methods
     @PostMapping("/create")
-    public EntityResponse createCoupon(@RequestBody  Coupon coupon) {
+    public EntityResponse createCoupon(@RequestBody Coupon coupon) {
         return couponService.createCoupon(coupon);
     }
 
@@ -39,7 +39,7 @@ public class CouponController {
     }
 
     @PutMapping("/modify")
-    public EntityResponse modifyCoupon(@RequestBody  Coupon coupon) {
+    public EntityResponse modifyCoupon(@RequestBody Coupon coupon) {
         return couponService.modifyCoupon(coupon);
     }
 
